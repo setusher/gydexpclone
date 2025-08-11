@@ -1,0 +1,29 @@
+.App {
+  min-height: 100vh;
+  background: 
+    radial-gradient(ellipse 800px 400px at top center, rgba(58, 137, 255, 0.6) 0%, transparent 70%),
+    linear-gradient(180deg, #0a0a0a 0%, #0a0a0a 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.App::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(64, 156, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(64, 156, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.App > * {
+  position: relative;
+  z-index: 2;
+}
